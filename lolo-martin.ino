@@ -1,6 +1,7 @@
 void setup() {
   Serial.begin(9600);
-pinMode(3, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(A4, INPUT);
   analogRead(A4);
  
 }
