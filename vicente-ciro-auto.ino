@@ -69,6 +69,9 @@ void loop() {
     else if (dato == 'd' || dato == 'D') {
       Serial.println("Girando ~45° a la derecha...");
       derecha();
+    } else if (dato == 'q' || dato == 'Q') {
+      Serial.println("Frenando");
+      parar();
     }
   }
 
