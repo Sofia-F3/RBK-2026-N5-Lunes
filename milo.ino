@@ -182,6 +182,10 @@ void loop() {
   int d = t / 59;
   Serial.println(d);
 
+  if (d == 0) {
+    d = 100;
+  }
+
   if (d < 15) {
     display.clearDisplay();
     display.drawBitmap(0, 0, autito , 128, 64, SSD1306_WHITE);
