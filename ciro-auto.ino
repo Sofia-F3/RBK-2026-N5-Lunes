@@ -54,7 +54,8 @@ void loop() {
       Serial.println("Detenido");
       parar();
     }
-  }
+  } else {
+    parar();
 }
 
 // Funciones de movimiento
