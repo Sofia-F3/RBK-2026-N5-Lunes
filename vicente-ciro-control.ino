@@ -31,6 +31,9 @@ void loop() {
   else if (valorX > 700) {
     BTSerial.write('D');
     Serial.println("Enviando: D (Derecha)");
+  } else {
+    BTSerial.write('Q');
+    Serial.println("Enviando: Q (Frenado)");
   }
 
   delay(100); // Pausa para no saturar el Bluetooth
