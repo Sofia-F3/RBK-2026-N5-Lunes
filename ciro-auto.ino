@@ -50,6 +50,10 @@ void loop() {
       Serial.println("Girando ~45° a la derecha...");
       derecha();
     }
+    else if (dato == 'q' || dato == 'Q') {
+      Serial.println("Detenido");
+      parar();
+    }
   }
 }
 
