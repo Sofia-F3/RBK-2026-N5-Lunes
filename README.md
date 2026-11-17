@@ -5,7 +5,7 @@ CIRO
 
 VICENTE
 - Pegar todo
-- Programar}
+- Programar
 
 LOLO
 - Revisar circuito
