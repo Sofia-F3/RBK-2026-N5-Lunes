@@ -5,7 +5,7 @@ SoftwareSerial BTSerial(10, 11);
 
 // Pines del Joystick
 const int pinX = A0;
-const int pinY = A1;
+const int pinY = A2;
 
 void setup() {
   Serial.begin(9600);
@@ -17,25 +17,21 @@ void loop() {
   int valorY = analogRead(pinY); // Arriba (~0) a Abajo (~1023)
 
   // Mover hacia adelante (Palanca hacia arriba)
-  // Nota: Si al empujar hacia adelante no avanza, cambia (< 300) por (> 700)
   if (valorY < 300) {
-    BTSerial.write('W');
-    Serial.println("Enviando: W (Adelante)");
-  } 
-    // Girar a la izquierda (Palanca a la izquierda)
-  else if (valorY > 700) {
-    BTSerial.write('S');
-    Serial.println("Enviando: S (Atrás)");
-  } 
-  // Girar a la izquierda (Palanca a la izquierda)
-  else if (valorX < 300) {
     BTSerial.write('A');
     Serial.println("Enviando: A (Izquierda)");
   } 
-  // Girar a la derecha (Palanca a la derecha)
-  else if (valorX > 700) {
+  else if (valorY > 700) {
     BTSerial.write('D');
     Serial.println("Enviando: D (Derecha)");
+  } 
+  else if (valorX < 300) {
+    BTSerial.write('S');
+    Serial.println("Enviando: S (Atrás)");
+  } 
+  else if (valorX > 700) {
+    BTSerial.write('W');
+    Serial.println("Enviando: W (Adelante)");
   } else {
     BTSerial.write('Q');
     Serial.println("Enviando: Q (Frenado)");
