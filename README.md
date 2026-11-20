@@ -6,6 +6,3 @@ CIRO
 
 VICENTE
 - Control tiene que estar con una compu
-
-LOLO
-- Revisar circuito
